@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="010084c3-f3dc-4ce8-86a9-10919188667e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/binarytree_test.iml" afterPath="$PROJECT_DIR$/binarytree_test.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="binarytree_test.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/main.py" changelist="010084c3-f3dc-4ce8-86a9-10919188667e" time="1414389955013" ignored="false" />
+    <file path="/main.py" changelist="010084c3-f3dc-4ce8-86a9-10919188667e" time="1414393299752" ignored="false" />
     <file path="/Dummy.txt" changelist="010084c3-f3dc-4ce8-86a9-10919188667e" time="1414384678568" ignored="false" />
     <file path="/a.py" changelist="010084c3-f3dc-4ce8-86a9-10919188667e" time="1414389816415" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -75,7 +73,7 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="16" selection-start="1479" selection-end="1479" vertical-scroll-proportion="0.52970296">
+            <state line="52" column="39" selection-start="1891" selection-end="1891" vertical-scroll-proportion="0.43069306">
               <folding>
                 <element signature="e#588#620#0" expanded="true" />
               </folding>
@@ -536,7 +534,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="16" selection-start="1479" selection-end="1479" vertical-scroll-proportion="0.52970296">
+        <state line="52" column="39" selection-start="1891" selection-end="1891" vertical-scroll-proportion="0.43069306">
           <folding>
             <element signature="e#588#620#0" expanded="true" />
           </folding>
