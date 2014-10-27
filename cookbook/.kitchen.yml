@@ -1,0 +1,23 @@
+driver:
+  name: vagrant
+driver_config:
+  require_chef_omnibus: true
+
+provisioner:
+  name: chef_zero
+  attributes:
+    authorization:
+      sudo:
+        users: ['vagrant']
+        passwordless: true
+
+platforms:
+  - name: ubuntu-14.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[binarytree_test::default]
+    attributes:
+      pythonstack:
+        webserver: "nginx"
