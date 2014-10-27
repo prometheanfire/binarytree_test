@@ -47,27 +47,37 @@ binarytree_json = json.loads("""{
 }
 }
 }""")
-if 'subtree' in binarytree_json:
-	print(binarytree_json['subtree'])
-if 'supertree' in binarytree_json:
-	print(binarytree_json['supertree'])
 
 
 def recursive_bintree_check(supertree, subtree):
-	for item in subtree:
-		if item == 'value':
-			if subtree['value'] is not supertree['value']:
-				return 'no_match'
-		elif item == 'right':
+	# check for formatting of datastructure
+	if 'value' in subtree and supertree:
+		if subtree['value'] == supertree['value']:
 			if 'right' in subtree and supertree:
-				recursive_bintree_check(supertree['right'], subtree['right'])
-		elif item == 'left':
+				code = recursive_bintree_check(supertree['right'], subtree['right'])
+				if code == 'matching':
+					return code
 			if 'left' in subtree and supertree:
-				recursive_bintree_check(supertree['left'], subtree['left'])
+				code = recursive_bintree_check(supertree['left'], subtree['left'])
+				if code == 'matching':
+					return code
+			if 'right' not in subtree and 'left' not in subtree:
+				return 'matching'
 		else:
-			return 'invalid_format'
-	return 'match'
+			if 'right' in supertree:
+				code = recursive_bintree_check(supertree['right'], subtree)
+				if code == 'matching':
+					return code
+			if 'left' in supertree:
+				recursive_bintree_check(supertree['left'], subtree)
+			if 'right' or 'left' not in supertree:
+				return 'no_match'
+	else:
+		return 'invalid_format'
 
-
-foo = recursive_bintree_check(binarytree_json['supertree'], binarytree_json['subtree'])
-print(foo)
+if __name__ == '__main__':
+	if 'subtree' and 'supertree' in binarytree_json:
+		foo = recursive_bintree_check(binarytree_json['supertree'], binarytree_json['subtree'])
+		print(foo)
+	else:
+		print('invalid_format')
