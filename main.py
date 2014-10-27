@@ -54,7 +54,20 @@ if 'supertree' in binarytree_json:
 
 
 def recursive_bintree_check(supertree, subtree):
-	
+	for item in subtree:
+		if item == 'value':
+			if subtree['value'] is not supertree['value']:
+				return 'no_match'
+		elif item == 'right':
+			if 'right' in subtree and supertree:
+				recursive_bintree_check(supertree['right'], subtree['right'])
+		elif item == 'left':
+			if 'left' in subtree and supertree:
+				recursive_bintree_check(supertree['left'], subtree['left'])
+		else:
+			return 'invalid_format'
+	return 'match'
 
-if binarytree_json['subtree']['value'] is binarytree_json['supertree']['value']:
-	recursive_bintree_check(binarytree_json['supertree'], binarytree_json['subtree'])
+
+foo = recursive_bintree_check(binarytree_json['supertree'], binarytree_json['subtree'])
+print(foo)
